@@ -1,0 +1,32 @@
+h1 {
+	font-family: 'Pacifico', cursive;
+	font-size: 3em;                                                             
+	padding: 18px;
+}
+
+#addBurger{
+	font-family: 'Pacifico', cursive;
+    font-size: 1em;
+    background-color: #CB4335;
+}
+
+p , label, div.well.devoured{
+
+	font-size: 20px;
+}
+
+#eatBurger {
+	background-color: #F1BB0A;
+}
+
+.devoured{
+	background-color: #D87920;
+}
+
+button{
+	padding: 15px;
+}
+
+p{
+	padding:5px;
+}

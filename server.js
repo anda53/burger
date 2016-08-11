@@ -9,8 +9,6 @@ var app = express();
 app.use('/static',express.static('public/assets'));
 var port = 3000;
 var myConnection = require('./config/connection.js'); 
-
-// require ORM
 var ORM = require('./config/orm');
 ORM.selectAll();
 // check if insertOne works
@@ -51,9 +49,10 @@ app.get('/', function(req, res) {
 //=========================CREATE==============
 //ORM.insertOne? 
 //I am getting a conflicting method type -cannot post and in network console 'get'
-app.post('/createBurger', function(req, res){
+app.post('/newBurger/create', function(req, res){
     myConnection.query('INSERT INTO burgers SET ?', {
-        burger_name: req.body.burgerName,
+        //the req.body needed the name burger_name in order to not be null and work
+        burger_name: req.body.burger_name,
         devoured: false
         }, function(err, response){
 
@@ -67,7 +66,7 @@ app.post('/createBurger', function(req, res){
 
 //====================UPDATE===============================
 
-app.put('./updateBurger', function(req, res){
+app.post('/update', function(req, res){
     //change devoured state to true for that particular burger
     myConnection.query('UPDATE burgers SET ? WHERE ?', [{devoured:true}, {id: req.body.id}],
         function(error, response){
@@ -77,14 +76,7 @@ app.put('./updateBurger', function(req, res){
     res.redirect('/');
 });
 
-
-
-
-
-
-
-
-
+//======================================================
 app.listen(port, function() {
     console.log('App listening on PORT ' + port);
 });
