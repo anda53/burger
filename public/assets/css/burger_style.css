@@ -2,35 +2,109 @@ h1 {
 	font-family: 'Pacifico', cursive;
 	font-size: 3em;                                                             
 	padding: 18px;
+	margin-top: -19%;
 }
 
 #addBurger{
 	font-family: 'Pacifico', cursive;
-    font-size: 1em;
+    font-size: 1.5em;
     background-color: #CB4335;
 }
 
 p , label, div.well.devoured{
 
 	font-size: 20px;
+	padding:5px;
+
 }
 
 #eatBurger {
 	background-color: #F1BB0A;
+	font-family: 'Pacifico', cursive;
+	 font-size: 1.5em;
+;
 }
 
 .devoured{
 	background-color: #D87920;
+}
+li{
+	list-style: none;
 }
 
 button{
 	padding: 15px;
 }
 
-p{
-	padding:5px;
-}
 #deleteBurger{
 	background-color: #f9860b;
+	font-size: 23px;
+	font-family: 'Pacifico', cursive;
+	padding:3%;
+}
+body{
+	background-image: url("sunrays.png");
+	background-size: 100% 110%;
+}
+h3{
+	font-size: 2em;
+	margin-top: -22%;
+	
+}
+.burgerPic{
+	margin-top: 5%;
+}
+
+
+@media screen and (max-width: 768px){
+	body{
+		background-size: 100% 127%;
+		background-repeat: no-repeat;
+	}
+	img{
+		width: 100%;
+		height:auto;
+	}
+	h1{
+		margin-top: -9%;
+	}
+	h3{
+
+		margin-top: 2%;
+	}
+
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px){
+   body{
+   	background-size: 100% 115%;
+   }
+   img{
+   	width: 100%;
+   }
+   h1{
+   	font-size: 28px;
+   }
+   p{
+   	font-size: 16px;
+   }
+   h3{
+   	font-size: 23px;
+   }
+   #addBurger{
+   	font-size: 15px;
+   	padding: 3%;
+   }
+   #eatBurger{
+ 	font-size: 15px;
+   	padding: 3%;
+   }
+   #deleteBurger{
+ 	font-size: 15px;
+   	padding: 3%;
+   }
+
+
+
+
 }
 
